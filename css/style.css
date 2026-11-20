@@ -1,0 +1,861 @@
+* {
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: "Dayson-regular";
+  src: url("../fonts/DaysOne-Regular.ttf");
+}
+@font-face {
+  font-family: "ChakraPetch-Bold";
+  src: url("../fonts/ChakraPetch-Bold.ttf");
+}
+@font-face {
+  font-family: "ChakraPetch-Regular";
+  src: url("../fonts/ChakraPetch-Regular.ttf");
+}
+
+.navbar {
+  background-color: rgb(11, 14, 19);
+  opacity: 0.9;
+}
+.navbar-nav .nav-item .nav-link {
+  font-family: "ChakraPetch-Regular";
+  font-size: 16px;
+  color: white;
+  transition: 0.2s;
+}
+.navbar-nav .nav-item .nav-link:hover {
+  color: rgb(203, 254, 28);
+}
+.my-button {
+  background-color: rgb(203, 206, 26);
+}
+.my-game-pad {
+  color: rgb(203, 206, 26);
+  font-size: 24px;
+  width: 10;
+}
+.navbar-brand {
+  color: rgb(203, 206, 26);
+  font-family: "ChakraPetch-Bold";
+  font-size: 20px;
+  padding-inline: 5px;
+}
+.container {
+  /* margin-bottom: 10px; */
+  padding-block: 10px;
+}
+.hero-section {
+  min-height: 100vh;
+  background-image:
+    linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 1)),
+    url("../images/hero-bg.jpg");
+  background-size: cover;
+  overflow: hidden;
+  padding-bottom: 10px;
+}
+.hero-right {
+  position: relative;
+}
+.hero-right img {
+  border: 4px solid yellow;
+  border-radius: 15px;
+  height: 400px;
+}
+.hero-right-box {
+  position: absolute;
+  border: 2px solid darkcyan;
+  border-radius: 15px;
+  background-color: rgb(11, 14, 19);
+  padding-inline: 10px;
+  bottom: -5%;
+  left: 10%;
+}
+.hero-right-text {
+}
+.hero-right-box i {
+  color: rgb(203, 206, 26);
+  font-size: 20px;
+}
+.hero-right-text p {
+  font-size: 12px;
+  color: white;
+  font-family: "ChakraPetch-Regular";
+}
+.hero-right-text span {
+  font-size: 20px;
+  color: white;
+  font-family: "ChakraPetch-Bold";
+}
+.hero-left {
+}
+.hero-left h1 {
+  font-family: "Dayson-regular";
+  color: white;
+  font-size: 60px;
+  font-weight: 700px;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+.hero-left h1 span {
+  color: rgb(203, 254, 28);
+}
+.hero-left p {
+  font-family: "ChakraPetch-Regular";
+  font-size: 16px;
+  color: white;
+  margin-bottom: 20px;
+}
+.hero-left button {
+  text-align: center;
+  font-family: "ChakraPetch-Bold";
+  font-size: 16px;
+  border: 1px solid transparent;
+  border-radius: 10px;
+}
+.hero-left .btn1 {
+  background-color: rgb(203, 254, 28);
+  border: 1px solid transparent;
+  margin-right: 5px;
+  margin-bottom: 5px;
+}
+.hero-left .btn2 {
+  border: 3px solid rgb(203, 254, 28);
+  margin-right: 5px;
+  color: rgb(203, 254, 28);
+  background-color: transparent;
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+  z-index: 1;
+}
+.hero-left .btn2::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: repeating-linear-gradient(
+    120deg,
+    rgb(203, 254, 28) 10%,
+    rgb(203, 254, 28) 10%
+  );
+  clip-path: polygon(0 0, 0 0, 0 100%, 0 100%);
+  transition: 0.1s;
+  z-index: -1;
+}
+.hero-left .btn2:hover:before {
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  color: black;
+}
+.hero-left .btn2:hover {
+  color: black;
+}
+
+.section-2 {
+  padding-block: 10px;
+  border: 1px;
+  background-color: rgb(11, 14, 19);
+}
+.section-2 .span22::before {
+  content: "";
+  width: 40px;
+  height: 4px;
+  position: absolute;
+  right: 100px;
+  background: linear-gradient(to left, rgb(203, 254, 28));
+  clip-path: polygon(0 0, 85% 0, 100% 50%, 85% 100%, 0 100%);
+  transform: rotate(180deg);
+  right: 100px;
+  top: 40%;
+}
+.section-2 .span22::after {
+  content: "";
+  width: 40px;
+  height: 4px;
+  position: absolute;
+  left: 100px;
+  background: linear-gradient(to left, rgb(203, 254, 28));
+  clip-path: polygon(0 0, 85% 0, 100% 50%, 85% 100%, 0 100%);
+  top: 40%;
+}
+
+.carousel-control-prev {
+  top: auto;
+  bottom: -50px;
+  left: 450px;
+  width: 45px;
+  height: 45px;
+  border: 5px solid white;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.5);
+  position: absolute;
+}
+.carousel-control-next {
+  top: auto;
+  bottom: -50px;
+  left: 500px;
+  width: 45px;
+  height: 45px;
+  border: 5px solid white;
+  border-radius: 50%;
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.carousel-control-next:hover,
+.carousel-control-prev:hover {
+  color: rgb(203, 206, 26);
+  border: 5px solid rgb(203, 206, 26);
+}
+
+.view-button {
+  font-family: "ChakraPetch-Bold";
+  font-size: 18px;
+  margin-top: 10px;
+  border: 5px solid rgb(203, 206, 26);
+  position: absolute;
+  color: rgb(203, 206, 26);
+  background-color: rgb(0, 0, 0);
+  right: 35%;
+  padding-block: 5px;
+  padding-inline: 8px;
+}
+.view-button:hover {
+  background-color: rgb(203, 206, 26);
+  color: black;
+}
+.section-2 h2 {
+  font-family: "Dayson-regular";
+  color: white;
+  font-size: 48px;
+  font-weight: bold;
+}
+.section-2 .span22 {
+  text-align: center;
+  font-family: "ChakraPetch-Bold";
+  font-size: 16px;
+  font-weight: bold;
+  color: rgb(203, 206, 26);
+  text-transform: uppercase;
+  position: relative;
+}
+
+.image-carousel {
+  position: relative;
+}
+.image-carousel-content {
+  position: static;
+}
+.first-text {
+  position: absolute;
+  top: 5%;
+  left: 3%;
+  opacity: 0;
+  transition: 0.2s;
+}
+.second-text {
+  position: absolute;
+  top: 5%;
+  left: 35%;
+  opacity: 0;
+  transition: 0.2s ease;
+}
+.third-text {
+  position: absolute;
+  bottom: 10%;
+  color: black;
+  left: 3%;
+  opacity: 0;
+  transition: 0.2s;
+}
+.image-carousel:hover .first-text,
+.image-carousel:hover .second-text {
+  opacity: 1;
+}
+.image-carousel:hover .third-text {
+  background: linear-gradient(
+      to top,
+      rgba(203, 206, 26, 1) 50%,
+      rgba(203, 206, 26, 0)
+    )
+    30%;
+
+  opacity: 1;
+}
+.image-carousel:hover img {
+  border: 5px solid rgb(203, 206, 26);
+  border-radius: 30px;
+}
+
+.image-carousel-content .first-text {
+  background-color: rgba(0, 0, 0, 0.2);
+  width: fit-content;
+  padding-inline: 8px;
+  padding-block: 3px;
+  display: inline-flex;
+  gap: 3px;
+  align-items: center;
+  border-radius: 10px;
+  top: 20px;
+  left: 20px;
+}
+.image-carousel-content .second-text {
+  background-color: rgba(0, 0, 0, 0.2);
+  width: fit-content;
+  padding-inline: 8px;
+  padding-block: 3px;
+  display: inline-flex;
+  gap: 3px;
+  align-items: center;
+  border-radius: 10px;
+}
+.image-carousel-content .first-text span,
+.image-carousel-content .second-text span {
+  font-family: "ChakraPetch-Bold";
+  color: white;
+  font-size: 12px;
+}
+.image-carousel-content .third-text span {
+  font-family: "ChakraPetch-Bold";
+  font-size: 16px;
+}
+.image-carousel-content i {
+  color: rgb(203, 206, 26);
+}
+
+.section-3 {
+  background-color: rgb(11, 14, 19);
+}
+
+.section-3 .container {
+  margin-bottom: 0;
+}
+.section-3 .container .what-we-do .span1 {
+  font-family: "ChakraPetch-Regular";
+  font-size: 16px;
+  color: rgb(203, 254, 28);
+  position: relative;
+}
+.what-we-do-cards {
+  position: relative;
+  padding: 10px;
+}
+.what-we-do-cards::after {
+  content: "";
+  position: absolute;
+  width: 60%;
+  height: 5px;
+  bottom: 0%;
+  left: 15%;
+  background: linear-gradient(
+    to left,
+    transparent,
+    rgb(199, 254, 28),
+    rgba(0, 0, 0, 0.6),
+    transparent 100%
+  );
+  filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.8));
+}
+
+.section-3 .container .what-we-do .span1::before {
+  content: "";
+  width: 60px;
+  height: 5px;
+  background: linear-gradient(
+    to left,
+    rgb(199, 254, 28),
+    rgba(0, 0, 0, 0.6),
+    transparent 100%
+  );
+  clip-path: (0 0, 75% 0, 100% 50%, 75% 100%, 0 100%);
+  position: absolute;
+  right: 100px;
+  top: 40%;
+}
+.section-3 .container .what-we-do .span1::after {
+  content: "";
+  width: 60px;
+  height: 5px;
+  background: linear-gradient(
+    to right,
+    rgb(199, 254, 28),
+    rgba(0, 0, 0, 0.6),
+    transparent 100%
+  );
+  position: absolute;
+  left: 100px;
+  top: 40%;
+  clip-path: (0 0, 75% 0, 100% 50%, 75% 100%, 0 100%);
+}
+
+.section-3 .container .what-we-do h2 {
+  font-family: "Dayson-regular";
+  font-size: 48px;
+  color: rgb(241, 241, 241);
+  text-transform: capitalize;
+  font-weight: 700px;
+}
+.section-3 .container .what-we-do .para2 {
+  font-family: "ChakraPetch-Bold";
+  font-size: 48px;
+  color: rgb(241, 241, 241);
+}
+.section-3 .container .what-we-do .para2 span {
+  color: rgb(203, 254, 28);
+}
+
+.card1 {
+  position: relative;
+  border: 2px solid rgb(31, 44, 59);
+  transition: 0.5s ease;
+  background-color: rgb(26, 26, 26);
+}
+.card1 .shapes:hover .triangle1,
+.card1 .shapes:hover .triangle2 {
+  opacity: 1;
+}
+.card1:hover {
+  background-color: rgb(31, 44, 59);
+  border: 2px solid rgb(199, 254, 28);
+}
+
+.card1 .shapes {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  top: 0;
+  left: 0;
+}
+.card1 .shapes .triangle1,
+.card1 .shapes .triangle2 {
+  opacity: 0;
+  width: 50px;
+  height: 50px;
+  background-color: rgba(203, 254, 28);
+  clip-path: polygon(0 0, 0 100%, 100% 100%);
+}
+
+.card1 .shapes .triangle1 {
+  position: absolute;
+  top: 2%;
+  left: 2%;
+  transform: rotate(90deg);
+}
+.card1 .shapes .triangle2 {
+  position: absolute;
+  right: 2%;
+  bottom: 2%;
+  transform: rotate(270deg);
+}
+
+.card1 .icon {
+  display: inline-flex;
+  background-color: rgb(30, 41, 57);
+  padding: 10px;
+  border-radius: 10%;
+  color: rgb(203, 254, 28);
+  font-size: 24px;
+}
+.card1 h3 {
+  font-family: "Dayson-regular";
+  font-size: 20px;
+  color: rgb(241, 241, 241);
+  font-weight: 700px;
+}
+.section-Animation {
+  background-color: rgb(11, 14, 19);
+  margin-top: 0;
+  overflow: hidden;
+  position: relative;
+}
+.section-Animation::before {
+  content: "";
+  position: absolute;
+  width: 90%;
+  height: 90%;
+  border-radius: 50%;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background: radial-gradient(
+    ellipse at center,
+    rgb(203, 254, 28) 0%,
+    rgb(203, 254, 28) 15%,
+    rgb(120, 150, 15) 45%,
+    rgb(40, 50, 5) 55%,
+    rgb(12, 15, 2) 65%,
+    rgb(0, 0, 0) 85%,
+    transparent 100%
+  );
+}
+.image-group img,
+.image-group2 img {
+  width: 80%;
+  height: 80%;
+  border-radius: 15px;
+}
+.image-track {
+  width: max-content;
+  margin-block: 15px;
+  animation: move 12s 2s linear infinite;
+}
+@keyframes move {
+  from {
+    transform: translateX(-50%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+.image-track2 {
+  width: max-content;
+  margin-block: 15px;
+  animation: move2 12s 2s linear infinite;
+  animation-direction: reverse;
+}
+@keyframes move2 {
+  from {
+    transform: translateX(-50%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+.section-4 {
+  background-color: rgb(11, 14, 19);
+}
+.section-4 .container {
+}
+.section-3 .container .team-top {
+}
+.team-bottom {
+  margin-top: 10px;
+}
+.images-team-bottom {
+}
+.card-team {
+  position: relative;
+}
+.card-team .image-box {
+  position: relative;
+  overflow: hidden;
+}
+.card-team .image-box .gray-image {
+  filter: grayscale(100%);
+  border-radius: 15px;
+}
+.card-team .image-box .colored-image {
+  position: absolute;
+  border-radius: 15px;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+  clip-path: inset(100% 0 0 0);
+  transition: 1s;
+}
+.card-team:hover .colored-image {
+  clip-path: inset(0 0 0 0);
+}
+
+.card-team .image-box .colored-image,
+.card-team .image-box .colored-image2 {
+  position: absolute;
+}
+.section-4 .container .team-top .span3 {
+  color: rgb(203, 254, 28);
+  font-family: "ChakraPetch-Bold";
+  font-size: 16px;
+  font-weight: 700px;
+  position: relative;
+}
+.section-4 .container .team-top .span3::before {
+  content: "";
+  width: 60px;
+  height: 4px;
+  position: absolute;
+  background: linear-gradient(to left, rgb(203, 254, 28));
+  clip-path: polygon(0 0, 85% 0, 100% 50%, 85% 100%, 0 100%);
+  transform: rotate(180deg);
+  right: 100px;
+  top: 40%;
+}
+.section-4 .container .team-top .span3::after {
+  content: "";
+  width: 60px;
+  height: 4px;
+  background: linear-gradient(to right, rgb(203, 254, 28));
+  position: absolute;
+  left: 100px;
+  top: 40%;
+  clip-path: polygon(0 0, 85% 0, 100% 50%, 85% 100%, 0 100%);
+}
+.section-4 .container .team-top h2 {
+  color: rgb(241, 241, 241);
+  font-size: 48px;
+  font-family: "Dayson-regular";
+  font-weight: 700px;
+}
+.section-4 .container .team-top .para4 {
+  color: OKLCH(0.707 0.022 261.325);
+  font-size: 20px;
+  font-family: "ChakraPetch-Bold";
+  font-weight: 700px;
+}
+.section-4 .container .team-bottom .card-team h3 {
+  color: white;
+  font-size: 20px;
+  font-family: "Dayson-regular";
+  position: absolute;
+  top: 60%;
+}
+.section-4 .container .team-bottom .card-team .card-team-info .para5 {
+  color: rgb(255, 255, 255, 0.8);
+  font-family: "ChakraPetch-Bold";
+  font-size: 14px;
+  position: absolute;
+  top: 80%;
+  transition: 2s;
+}
+.section-4 .container .team-bottom .card-team .card-team-info .para6 {
+  color: oklch(0.707 0.022 261.325);
+  font-family: "ChakraPetch-Bold";
+  font-size: 12px;
+  position: absolute;
+  top: 90%;
+}
+.section-4 .container .team-bottom .card-team .card-team-info .para7 {
+  color: white;
+  font-family: "ChakraPetch-Bold";
+  font-size: 18px;
+  position: absolute;
+  top: 70%;
+  left: 80%;
+  transform: rotate(90deg);
+  font-weight: 400px;
+  transition: 2s;
+}
+.card-team-info {
+  padding-left: 7px;
+}
+.section-4
+  .container
+  .team-bottom
+  .card-team:hover
+  .section-4
+  .container
+  .team-bottom
+  .card-team
+  .card-team-info
+  .para5 {
+  color: rgb(203, 254, 28);
+}
+
+.card-team .image-box .colored-image2 {
+  position: absolute;
+  border-radius: 15px;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+  clip-path: inset(0 0 100% 0);
+  transition: 1s;
+}
+.card-team:hover .colored-image2 {
+  clip-path: inset(0 0 0 0);
+}
+
+.section-5 {
+  background-color: rgb(14, 21, 31);
+}
+.card-contact,
+.form-contact {
+  background-color: rgb(30, 41, 57);
+}
+.icon-circle {
+  width: 50px;
+  height: 50px;
+  background-color: rgb(203, 254, 28);
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  font-size: 24px;
+}
+.card-contact-text h3 {
+  font-family: "Dayson-regular";
+  font-size: 20px;
+  color: rgb(241, 241, 241);
+}
+.card-contact-text p {
+  font-family: "ChakraPetch-Bold";
+  font-size: 16px;
+  color: oklch(0.707 0.022 261.325);
+}
+.card-community {
+  background: linear-gradient(135deg, #e6e22e, #4ee3a5);
+}
+.card-community h3 {
+  font-family: "Dayson-regular";
+  font-size: 24px;
+  color: rgb(11, 14, 19);
+  font-weight: 700px;
+}
+.card-community p {
+  font-family: "ChakraPetch-Bold";
+  font-size: 16px;
+  color: rgba(11, 14, 19, 0.7);
+  font-weight: 400px;
+}
+.community-icons span {
+  width: 50px;
+  height: 50px;
+  color: rgb(203, 254, 28);
+  border-radius: 50%;
+  font-size: 20px;
+  background-color: black;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.form-contact h3 {
+  color: rgb(241, 241, 241);
+  font-family: "Dayson-regular";
+  font-size: 24px;
+  font-weight: bold;
+}
+.form-label {
+  font-family: "ChakraPetch-Bold";
+  font-size: 14px;
+  font-weight: bold;
+  color: white;
+}
+.form-control,
+.form-seclect {
+  background-color: oklch(0.707 0.022 261.325);
+  border: 2px solid rgba(14, 21, 31, 0.4);
+}
+.form-seclect {
+  color: rgb(241, 241, 241);
+  outline: none;
+}
+.form-control:focus,
+.form-seclect:focus {
+  outline: none;
+  border: 4px solid rgb(203, 254, 28);
+  box-shadow: none;
+  background-color: oklch(0.707 0.022 261.325);
+}
+.form-check {
+  color: oklch(0.707 0.022 261.325);
+  font-size: 14px;
+  font-family: "ChakraPetch-Bold";
+}
+.btn-send {
+  background: linear-gradient(120deg, yellow, rgb(2, 238, 2));
+  background-position: 0 0;
+  background-size: 200% 100%;
+  font-family: "ChakraPetch-Bold";
+  font-size: 18px;
+  font-weight: bold;
+  color: black;
+  transition: 0.5s;
+}
+.btn-send:hover {
+  background-position: 100% 0%;
+}
+.form-bottom h4 {
+  color: rgb(203, 254, 28);
+  font-family: "ChakraPetch-Bold";
+  font-size: 24px;
+  font-weight: bold;
+}
+.form-bottom p {
+  color: oklch(0.707 0.022 261.325);
+  font-family: "ChakraPetch-Bold";
+  font-size: 14px;
+}
+.contact-top .span8 {
+  font-family: "ChakraPetch-Bold";
+  font-size: 16px;
+  color: rgb(203, 254, 28);
+  position: relative;
+  text-align: center;
+  left: 50%;
+  display: block;
+  width: fit-content;
+  transform: translateX(-50%);
+  white-space: nowrap;
+}
+.section-5 .container .contact-top .span8::before {
+  content: "";
+  width: 60px;
+  height: 3px;
+  position: absolute;
+  background: linear-gradient(to left, rgb(203, 254, 28));
+  clip-path: polygon(0 0, 85% 0, 100% 50%, 85% 100%, 0 100%);
+  transform: rotate(180deg);
+  right: 100px;
+  top: 40%;
+}
+.section-5 .container .contact-top .span8::after {
+  content: "";
+  width: 60px;
+  height: 3px;
+  background: linear-gradient(to right, rgb(203, 254, 28));
+  position: absolute;
+  left: 100px;
+  top: 40%;
+  clip-path: polygon(0 0, 85% 0, 100% 50%, 85% 100%, 0 100%);
+}
+.contact-top h2 {
+  color: rgb(241, 241, 241);
+  font-family: "Dayson-regular";
+  font-size: 48px;
+  font-weight: 700px;
+  text-align: center;
+}
+.contact-top .para9 {
+  font-family: "ChakraPetch-Bold";
+  font-size: 20px;
+  color: oklch(0.707 0.022 261.325);
+  text-align: center;
+}
+.section-footer {
+  background-color: rgb(0, 0, 0);
+}
+.footer-top-1 p {
+  color: oklch(0.707 0.022 261.325);
+  font-size: 16px;
+  font-family: "ChakraPetch-Bold";
+}
+.footer-top-2 h4,
+.footer-top-3 h4,
+.footer-top-4 h4 {
+  font-family: "Dayson-regular";
+  font-size: 20px;
+  color: #f1f1f1;
+}
+.footer-top-2 ul,
+.footer-top-3 ul,
+.footer-top-4 ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.footer-top-2 ul li a,
+.footer-top-3 ul li a,
+.footer-top-4 ul li a {
+  text-decoration: none;
+  color: oklch(0.707 0.022 261.325);
+  font-size: 16px;
+  font-family: "ChakraPetch-Bold";
+}
+.links-bottom a {
+  text-decoration: none;
+  color: oklch(0.707 0.022 261.325);
+  font-size: 16px;
+  font-family: "ChakraPetch-Bold";
+  text-wrap: nowrap;
+}
+.social a {
+  color: oklch(0.707 0.022 261.325);
+}
